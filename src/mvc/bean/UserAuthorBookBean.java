@@ -1,6 +1,6 @@
-package mvc.bean;
-public class UserAuthorBookBean {
-	
+package mvc.bean; // Le package dans lequel se trouve la classe
+public class UserAuthorBookBean { // Déclaration de la classe UserAuthorBookBean
+// Attributs privés de la classe pour stocker les données	
 private String username; 
 private String password;
 
