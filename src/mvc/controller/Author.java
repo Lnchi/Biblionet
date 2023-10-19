@@ -24,6 +24,7 @@ protected void doPost(HttpServletRequest request, HttpServletResponse
 		String lastName = request.getParameter("lastName");
 		String firstName = request.getParameter("firstName");
 		String dob = request.getParameter("dob");
+  // Création d'une instance de UserAuthorBookBean pour stocker les données
   UserAuthorBookBean authorBean = new UserAuthorBookBean();  
   //Utilisation de Java Beans qui est Un moyen le plus simple de jouer avec un groupe de données associées
   authorBean.setNum(num);
