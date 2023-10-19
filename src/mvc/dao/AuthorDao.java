@@ -5,29 +5,33 @@ import java.sql.SQLException;
 import mvc.util.DBConnection; 
 import mvc.bean.UserAuthorBookBean;
 public class AuthorDao {
-	
+// RÃ©cupÃ©ration des donnÃ©es de l'auteur depuis l'objet authorBean	
 public String addAuthor(UserAuthorBookBean authorBean) 
-{     String num =authorBean.getNum(); 
+{         String num =authorBean.getNum(); 
 	  String lastName =authorBean.getLastName(); 
 	  String firstName = authorBean.getFirstName();
 	  String dob = authorBean.getDob();
 
 Connection con = null; 
+
+
 PreparedStatement preparedStatement = null; 
 try { con= DBConnection.createConnection();
-    // On insèrer les données de l'auteur dans la table 'Author'
-   // On utilise des instructions préparées ici pour insérer un tas de données
+// PrÃ©paration de la requÃªte SQL pour insÃ©rer les donnÃ©es dans la table 'Author'
+// Nous utilisons une instruction prÃ©parÃ©e pour insÃ©rer un ensemble de donnÃ©es
 preparedStatement = con.prepareStatement("insert into Author(num,lastName,firstName,dob) values (?,?,?,?)"); 
+// DÃ©finition des valeurs des marqueurs de position dans la requÃªte SQL
 preparedStatement.setString(1, num);
 preparedStatement.setString(2, lastName);
 preparedStatement.setString(3, firstName);
 preparedStatement.setString(4, dob);
-int i= preparedStatement.executeUpdate(); //renvoie le nombre de lignes affectées par l'exécution de l'instruction SQL. 
+// ExÃ©cution de la requÃªte SQL et rÃ©cupÃ©ration du nombre de lignes affectÃ©es
+int i= preparedStatement.executeUpdate(); 
 if (i!=0) 
-//S'assurer que les données ont été insérées dans la base de données
+//S'assurer que les donnÃ©es ont Ã©tÃ© insÃ©rÃ©es dans la base de donnÃ©es
 	  return "Success"; } 
-catch(SQLException e) { e.printStackTrace(); }
-return "Error"; //En cas d'échec,on envoi un message d'erreur à partir d'ici.
+catch(SQLException e) { e.printStackTrace(); }   // En cas d'erreur SQL, afficher la trace de l'erreur
+return "Error"; //En cas d'Ã©chec,on envoi un message d'erreur Ã  partir d'ici.
 }} 
 
 
