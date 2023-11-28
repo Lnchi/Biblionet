@@ -1,29 +1,15 @@
 # Biblionet
 
-  Nous utilisons l’environnement de développement intégré Eclipse (IDE) pour cette 
-application via la technologie J2EE. 
+Nous utilisons Eclipse, un environnement de développement intégré (IDE), dans le cadre de cette application J2EE.
 
-  Nous utilisons le serveur de base de données MySQL dans cette application.
+Nous exploitons le serveur de bases de données MySQL pour cette solution web qui propose plusieurs fonctionnalités :
 
-  Cette solution web offre les possibilités suivantes : 
+Recherche des livres par ISSN, titre, domaine et auteur afin de faciliter l'accès aux informations documentaires pour le public cible.
+Authentification d'un administrateur lui permettant d'ajouter des données relatives aux livres et auteurs.
+Cette application suit l'architecture Model View Controller (MVC), une structure qui permet de séparer la logique de l'application de l'interface utilisateur et de contrôler les interactions entre ces deux éléments.
 
--La recherche des livres par le Issn, titre, domaine et auteur pour assurer la diffusion de 
-l’information documentaire au profit du public concerné.
+Dans cette architecture :
 
--L’authentification d’un administrateur qui a la possibilité d’ajouter des informations relatives 
-aux livres et auteurs.
-
-  Les traitements sont faits selon l'architecture Model View Controller (MVC). 
-
-L'architecture Model View Controller (MVC): 
-
-  Elle sépare la logique d'application de l'interface utilisateur et le contrôle entre l'interface 
-utilisateur et la logique d'application. 
-Modèle : - Le modèle représente les données et les règles qui régissent l'accès et les mises à 
-jour de ces données. Dans les logiciels d'entreprise, un modèle sert souvent d'approximation 
-logicielle d'un processus réel. 
-Vue : - La vue rend le contenu d'un modèle. Il spécifie exactement comment les données du 
-modèle doivent être présentées. Si les données du modèle changent, la vue doit mettre à jour 
-sa présentation si nécessaire. 
-Contrôleur : - Le contrôleur traduit les interactions de l'utilisateur avec la vue en actions que 
-le modèle effectuera. 
+Le modèle représente les données et les règles régissant leur accès et leur mise à jour. Il sert souvent à modéliser les processus réels dans les logiciels d'entreprise.
+La vue affiche le contenu du modèle, déterminant la présentation des données. Elle se met à jour si le modèle change.
+Le contrôleur traduit les interactions de l'utilisateur avec la vue en actions exécutées par le modèle.
