@@ -15,7 +15,7 @@ public class logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     public logout() {
         super();}
-
+        //ce servlet est destiné à gérer la déconnexion d'un utilisateur. Lorsqu'un utilisateur envoie une requête GET (par exemple, en cliquant sur un bouton de déconnexion), cette classe servlet supprime les informations de session de l'utilisateur et le redirige vers la page d'accueil de l'application.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 
