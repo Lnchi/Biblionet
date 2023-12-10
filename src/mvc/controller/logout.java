@@ -18,7 +18,7 @@ public class logout extends HttpServlet {
         //ce servlet est destiné à gérer la déconnexion d'un utilisateur. Lorsqu'un utilisateur envoie une requête GET (par exemple, en cliquant sur un bouton de déconnexion), cette classe servlet supprime les informations de session de l'utilisateur et le redirige vers la page d'accueil de l'application.
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-
+                  //La classe PrintWriter en Java est utilisée pour envoyer du texte au client (dans ce cas-ci, un navigateur web) via la réponse (response) du serveur. L'objet PrintWriter est associé au flux de sortie (OutputStream) de la réponse, ce qui permet d'écrire des données dans le corps de la réponse HTTP.
 		PrintWriter out=response.getWriter();  
 		 //Utiliser la session existante si elle existe ou renvoyer null
 		HttpSession session=request.getSession(false);
